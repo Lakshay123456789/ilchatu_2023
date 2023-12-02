@@ -22,7 +22,8 @@ const ForgotPassword = async (req, res) => {
       // user.resetTokenExpiration = Date.now() + 3600000; // Token valid for 1 hour
       await user.save();
     ///  console.log("forgetpassword3");
-      const link = `${process.env.BASE_URL}ResetNewPassword/${user._id}/${resetToken}`;
+     // const link = `${process.env.BASE_URL}ResetNewPassword/${user._id}/${resetToken}`;
+      const link = `https://i-l-chatu.onrender.com/ResetNewPassword/${user._id}/${resetToken}`;
 
       const transporter = nodemailer.createTransport({
           host: 'smtp.gmail.com',
