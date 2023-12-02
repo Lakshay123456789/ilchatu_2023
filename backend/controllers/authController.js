@@ -53,7 +53,8 @@ const verifyUser = async (req, res) => {
         // Redirect or respond in a way that logs the user in
         // For example, you can redirect to the login page
       // res.redirect(process.env.BASE_URL);
-        res.redirect("https://i-l-chatu.onrender.com/");
+        var base_url = "https://i-l-chatu.onrender.com/";
+        res.redirect(base_url);
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
